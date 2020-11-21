@@ -23,9 +23,10 @@
     white-space: nowrap;
     text-transform: uppercase;
     @include font-normal();
+    transition: color 5s;
 
     &:hover {
-      color: #00acdc;
+      color: $highlight-color;
     }
   }
 }
@@ -35,7 +36,7 @@
 }
 
 .is-active {
-  color: #00acdc;
+  color: $highlight-color;
 
   &:after {
     content: "";
