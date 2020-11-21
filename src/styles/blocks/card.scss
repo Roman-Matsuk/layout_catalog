@@ -1,35 +1,44 @@
 .card {
-  border: 1px solid #f3f3f3;
+  border: 1px solid $card-border-color;
   border-radius: 5px;
-  padding: 30px 14px 15px;
+  padding: 15px 14px;
 
   &--parameters {
     width: 200px;
     margin-bottom: 50px;
   }
-  
+
   &__photo {
-    width: 160px;
-    height: 134px;
-    margin: 0 5px 45px;
+    height: 164px;
+    margin: 0 2px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s;
+
+    &:hover {
+      transform: scale(1.2);
+      border: 3px solid $card-border-color;
+      border-radius: 5px;
+    }
   }
   
   &__img {
-    width: 100%;
-    height: 100%;
+    width: 160px;
+    height: 134px;
   }
-  
+
   &__title {
     margin: 5px 0;
     @include font-normal();
     line-height: 15px;
   }
-  
+
   &__code {
     margin-bottom: 15px;
     @include font-small();
   }
-  
+
   &__rating {
     margin: 15px 0 20px;
     display: flex;
@@ -37,23 +46,23 @@
     align-items: center;
     margin-block-start: 0;
   }
-  
+
   &__feedback {
     white-space: nowrap;
     @include font-small();
   }
-  
+
   &__price {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     font-size: 11px;
   }
-  
+
   &__price-amount {
     @include font-price();
   }
-  
+
   &__buy {
     display: flex;
     justify-content: center;
@@ -61,13 +70,14 @@
     height: 40px;
     width: 170px;
     background-color: $highlight-color;
-    color: #fff;
+    color: $card-buy-color;
     @include font-button();
     text-decoration: none;
     text-transform: uppercase;
     border: 1px solid $highlight-color;
     border-radius: 5px;
     margin-top: 20px;
+    transition: background-color 1s, color 1s;
 
     &:hover {
       background-color: $link-hover-color;
