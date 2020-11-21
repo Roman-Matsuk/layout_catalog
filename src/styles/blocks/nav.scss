@@ -23,7 +23,7 @@
     white-space: nowrap;
     text-transform: uppercase;
     @include font-normal();
-    transition: color 5s;
+    transition: color 1s;
 
     &:hover {
       color: $highlight-color;
